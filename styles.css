@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --cell-width: 200px; 
+  }
+  
+  .tablecompare {
+    width: 100%;
+  }
+  .tablecompare__row {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .tablecompare__row--header {
+    font-weight: bold;
+  }
+  .tablecompare__col{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .tablecompare__col--label {
+    flex: 0 0 10rem;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    letter-spacing: 1px;
+  }
+  
+  .tablecompare__col--slider {
+    flex: 0 0 23rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+  }
+  .tablecompare__col--slider::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .tablecompare__slider-container {
+    display: inline-flex;
+    white-space: normal;
+  }
+  
+  .tablecompare__slide {
+    flex: 0 0 23rem;
+    display: flex;
+    flex-wrap: wrap;          
+    align-items: flex-start;   
+    justify-content: start;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    white-space: normal;      
+    overflow-wrap: break-word; 
+    margin-right: 1.125rem;
+    margin-left: 1.125rem;
+  }
+  
+  @media (min-width: 768px) {
+    .tablecompare {
+      display: table;
+      border-collapse: collapse;
+    }
+    .tablecompare__row {
+      display: table-row;
+    }
+    .tablecompare__col,
+    .tablecompare__slide {
+      display: table-cell;
+    }
+    .tablecompare__col--label {
+      position: static;
+      padding-right: 3rem;
+    }
+    .tablecompare__col--slider {
+      flex: none;
+      overflow-x: visible;
+    }
+    .tablecompare__slider-container {
+      display: flex;
+      justify-content: space-around;
+      white-space: normal;
+    }
+  }
+ 
+  
